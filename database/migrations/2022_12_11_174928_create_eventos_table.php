@@ -24,7 +24,7 @@ class CreateEventosTable extends Migration
             $table->char('tipo',1);
             $table->boolean('es_recurrente');
             $table->string('dias',20);
-            $table->timestamp('fecha_inicio');
+            $table->timestamp('fecha_inicio')->nullable(true);;
             $table->timestamp('fecha_finalizacion')->nullable(true);
             $table->foreignId('instalacion_id')->constrained('instalacion');
         });
