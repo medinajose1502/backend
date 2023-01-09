@@ -5,23 +5,22 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.0.2",
-        "guzzlehttp/guzzle": "^7.2",
-        "handleglobal/nova-nested-form": "dev-master",
-        "laravel/fortify": "^1.14",
-        "laravel/framework": "^9.19",
+        "php": "^7.3|^8.0",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/fortify": "^1.15",
+        "laravel/framework": "^8.75",
         "laravel/nova": "4.19.6",
-        "laravel/sanctum": "^3.1",
-        "laravel/tinker": "^2.7"
+        "laravel/sanctum": "^2.11",
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
+        "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^6.1",
-        "phpunit/phpunit": "^9.5.10",
-        "spatie/laravel-ignition": "^1.0"
+        "nunomaduro/collision": "^5.10",
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "psr-4": {
@@ -50,6 +49,14 @@
             "@php artisan key:generate --ansi"
         ]
     },
+
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./nova"
+        }
+    ],
+
     "extra": {
         "laravel": {
             "dont-discover": []
@@ -58,21 +65,9 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
+        "sort-packages": true
     },
-    "repositories": [
-    {
-        "type": "path",
-        "url": "./nova"
-    },
-    {
-        "url": "https://github.com/handleglobal/laravel-nova-nested-form.git",
-        "type": "git"
-    }
-    ],
     "minimum-stability": "dev",
+    
     "prefer-stable": true
 }
